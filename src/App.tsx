@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from 'react';
-import './App.css';
+import React, { useState } from 'react';
+import './style/main.css'
 import {
   Panes, ResizablePanes
 } from 'resizable-panes-react'
