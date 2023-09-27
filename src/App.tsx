@@ -9,7 +9,7 @@ export const App = () => {
   return (
     <div>
       <div>
-        <h3 className="t-color-mainBlue t-aligin-center">Simple Panes</h3>
+        <h3 className=" t-aligin-center">Simple Panes</h3>
       </div>
 
       <div className="m-20-0">
