@@ -1,15 +1,15 @@
 import React from 'react';
-import './App.css';
+import './style/main.css'
 import {
   Panes, ResizablePanes
 } from 'resizable-panes-react'
 import { CustomResizerFirst } from './custom-resizer-first';
 
+
 export const App = () => {
   const pane1 = 'pane1'
   const pane2 = 'pane2'
   const pane3 = 'pane3'
-
   return (
     <div>
       <div>
@@ -59,7 +59,6 @@ export const App = () => {
           </ResizablePanes>
         </Panes>
       </ResizablePanes>
-
     </div>
   )
 }
