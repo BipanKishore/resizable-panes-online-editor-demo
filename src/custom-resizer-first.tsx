@@ -28,4 +28,3 @@ export const CustomResizerFirst = ({horizontal, onMouseDown}: {
 CustomResizerFirst.defaultProps = {
   horizontal: false,
 };
-console.log('test');
