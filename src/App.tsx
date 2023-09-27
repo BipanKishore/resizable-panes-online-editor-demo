@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './style/main.css'
 import {
   Panes, ResizablePanes
 } from 'resizable-panes-react'
