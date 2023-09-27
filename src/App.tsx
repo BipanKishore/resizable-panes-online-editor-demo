@@ -1,8 +1,11 @@
 import React, { useRef } from 'react';
-import './App.css';
-import { Panes, ResizablePanes } from 'resizable-panes-react';
+import './style/main.css'
+import {
+  Panes, ResizablePanes
+} from 'resizable-panes-react'
 import { CustomResizerFirst } from './custom-resizer-first';
 import PaneModesIcons from './pane-modes-icons';
+
 
 export const App = () => {
   const resizableRef = useRef<any>({});
