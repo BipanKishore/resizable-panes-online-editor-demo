@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  Panes, ResizablePanes
+} from 'resizable-panes-react'
+import { CustomResizerFirst } from './custom-resizer-first';
 
-function App() {
+export const App = () => {
+  const pane2 = 'pane2'
+  const pane3 = 'pane3'
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <div>
+        <h3 className='t-aligin-center'>Horizontal Panes</h3>
+      </div>
+      <ResizablePanes
+        resizer={
+          <CustomResizerFirst horizontal />
+            }
+      >
+
+        <Panes
+          className={pane2} id={pane2} size={150}
         >
-          Learn React
-        </a>
-      </header>
+        </Panes>
+
+        <Panes
+          className={pane3} id={pane3} size={150}
+        >
+        </Panes>
+
+      </ResizablePanes>
+
     </div>
-  );
+
+  )
 }
 
 export default App;
