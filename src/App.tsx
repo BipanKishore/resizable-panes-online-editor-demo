@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
+import './style/main.css'
 import {
   Panes, ResizablePanes
 } from 'resizable-panes-react'
 import { CustomResizerFirst } from './custom-resizer-first';
 import { CustomResizerSecond } from './custom-resizer-second';
+
 
 export const App = () => {
   const pane1 = 'pane1'
