@@ -1,51 +1,43 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import {
   Panes, ResizablePanes
 } from 'resizable-panes-react'
 import { CustomResizerFirst } from './custom-resizer-first';
-import { CustomResizerSecond } from './custom-resizer-second';
+import PaneModesIcons from './pane-modes-icons';
 
-export const App = () => {
+export const App  = () => {
+  const resizableRef = useRef<any>({})
   const pane1 = 'pane1'
   const pane2 = 'pane2'
-  const pane3 = 'pane3'
+
   return (
     <div>
       <div>
-        <h3 className='t-color-mainBlue t-aligin-center'>Custom Resizer for Panes</h3>
+        <h3 className='t-color-mainBlue t-aligin-center'>Fullscreen modes</h3>
       </div>
 
-      <div className='m-20-0' >
-        <ResizablePanes
-          className='h-300' resizer={
-            <CustomResizerFirst />
-            }
-          vertical
+      <ResizablePanes
+        resizer={
+          <CustomResizerFirst horizontal />
+          }
+        onReady={(api: any) => {
+          resizableRef.current.api = api
+        }}
+      >
+        <Panes
+          className={pane1} id={pane1} size={200}
         >
-          <Panes
-            className={pane1} id={pane1}
-            size={350}
-          >
-          </Panes>
+          <PaneModesIcons id={pane1} resizableRef={resizableRef} />
+        </Panes>
 
-          <Panes
-            className={pane2} id={pane2}
-            resizer={
-              <CustomResizerSecond />
-            }
-            size={300}
-          >
-          </Panes>
+        <Panes className={pane2} id={pane2} size={200}>
+          <PaneModesIcons id={pane2} resizableRef={resizableRef} />
+        </Panes>
+      </ResizablePanes>
 
-          <Panes className={pane3} id={pane3} size={150}>
-          </Panes>
-
-        </ResizablePanes>
-      </div>
     </div>
   )
 }
-
 
 export default App;
