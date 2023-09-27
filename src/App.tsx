@@ -4,7 +4,7 @@ import {
   Panes, ResizablePanes
 } from 'resizable-panes-react'
 import { CustomResizerFirst } from './custom-resizer-first';
-import { CustomResizerSecond } from './custom-resizer-second';
+
 
 export const App = () => {
   const pane1 = 'pane1'
@@ -31,9 +31,6 @@ export const App = () => {
 
           <Panes
             className={pane2} id={pane2}
-            resizer={
-              <CustomResizerSecond />
-            }
             size={300}
           >
           </Panes>
