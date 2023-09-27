@@ -112,7 +112,7 @@ border-radius: 5px;
 }
 
 .custom-resizer-1st-parent:hover {
-  padding: 3px;
+  /* padding: 3px; */
 }
 
 .custom-resizer-1st-child {
@@ -129,7 +129,7 @@ border-radius: 5px;
 }
 
 .custom-resizer-2st-parent:hover {
-  padding: 3px;
+  /* padding: 3px; */
 }
 
 .custom-resizer-2st-child {
