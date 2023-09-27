@@ -1,5 +1,5 @@
-import React from 'react'
-import {joinClassName} from './util'
+import React from 'react';
+import { joinClassName } from './util';
 
 export const CustomResizerFirst = ({horizontal, onMouseDown}: {
   horizontal: boolean,
@@ -21,10 +21,11 @@ export const CustomResizerFirst = ({horizontal, onMouseDown}: {
     <div className={parentClassName}>
       <div className={childClassName} onMouseDown={onMouseDown}></div>
     </div>
-  )
-}
+  );
+};
 
 
 CustomResizerFirst.defaultProps = {
-    horizontal: false
-}
+  horizontal: false,
+};
+console.log('test');
