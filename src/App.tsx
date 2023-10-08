@@ -18,22 +18,29 @@ export const App = () => {
       </div>
 
       <div className='m-20-0' >
-      <div className='m-20-0' >
-        <ResizablePanes>
-          <Panes
-            className={pane1} id={pane1} size={280}
-          >
+
+      <div className='m-20-0 h-300' >
+        <ResizablePanes
+          className='' resizer={
+            <CustomResizerFirst />
+            }
+          unit='ratio'
+          vertical
+        >
+          <Panes className={pane1} id={pane1} minSize={3} size={30}>
+          
           </Panes>
 
           <Panes
-            className={pane2} id={pane2} size={300}
+            className={pane2} id={pane2} minSize={4} size={40}
           >
           </Panes>
 
-          <Panes className={pane3} id={pane3} size={200}>
+          <Panes className={pane3} id={pane3} minSize={3} size={30}>
           </Panes>
         </ResizablePanes>
       </div>
+
       </div>
     </div>
   )
