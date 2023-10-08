@@ -1,5 +1,6 @@
 import React from 'react';
-import './style/main.css'
+import './style/style.scss'
+import './style.css'
 import {
   Panes, ResizablePanes
 } from 'resizable-panes-react'
@@ -13,32 +14,26 @@ export const App = () => {
   return (
     <div>
       <div>
-        <h3 className='t-color-mainBlue t-aligin-center'>Custom Resizer for Panes</h3>
+        <h3 className='t-color-mainBlue t-aligin-center'>Pains</h3>
       </div>
 
       <div className='m-20-0' >
-        <ResizablePanes
-          className='h-300' resizer={
-            <CustomResizerFirst />
-            }
-          vertical
-        >
+      <div className='m-20-0' >
+        <ResizablePanes>
           <Panes
-            className={pane1} id={pane1}
-            size={350}
+            className={pane1} id={pane1} size={100}
           >
           </Panes>
 
           <Panes
-            className={pane2} id={pane2}
-            size={300}
+            className={pane2} id={pane2} size={150}
           >
           </Panes>
 
-          <Panes className={pane3} id={pane3} size={150}>
+          <Panes className={pane3} id={pane3} size={120}>
           </Panes>
-
         </ResizablePanes>
+      </div>
       </div>
     </div>
   )
